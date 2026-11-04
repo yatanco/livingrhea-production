@@ -2,6 +2,7 @@
 import "../styles/beta/global.css";
 import SiteHeader from "../components/SiteHeader.astro";
 import SiteFooter from "../components/SiteFooter.astro";
+import Analytics from "../components/Analytics.astro";
 import { plainText, pageDescriptions, snippet } from "../lib/seo.js";
 import Schema, { type Article } from "../components/Schema.astro";
 // Fingerprinted by Vite, so they can be cached forever; same files as global.css.
@@ -124,5 +125,6 @@ const image = socialSource ? new URL(socialSource, Astro.site).href : undefined;
       <slot name="article-footer" />
     </main>
     <SiteFooter />
+    <Analytics />
   </body>
 </html>

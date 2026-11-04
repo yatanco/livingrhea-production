@@ -20,10 +20,19 @@ const html = new Map(
   await Promise.all(all.map(async (p) => [p, load(await readFile(p, "utf8"))])),
 );
 
-test("public pages run no JavaScript and load nothing from other hosts", () => {
+// The one script allowed besides JSON-LD: the deferred Google Analytics tag.
+const analytics = (await readFile("src/components/Analytics.astro", "utf8"))
+  .match(/<script is:inline>([\s\S]*?)<\/script>/)[1]
+  .trim();
+
+test("public pages run no JavaScript but analytics, and load nothing from other hosts", () => {
   for (const [page, $] of html) {
-    for (const s of $("script").toArray())
-      assert.equal($(s).attr("type"), "application/ld+json", page);
+    for (const s of $("script").toArray()) {
+      if ($(s).attr("type") === "application/ld+json") continue;
+      assert.equal($(s).html().trim(), analytics, `${page}: only the analytics script`);
+      assert.equal($(s).attr("src"), undefined, page);
+    }
+    assert.equal($("script:not([type])").length, 1, `${page}: analytics once`);
     for (const el of $("link[href], img[src], source[srcset], iframe[src]").toArray()) {
       const url = $(el).attr("href") || $(el).attr("src") || $(el).attr("srcset");
       if ($(el).is("iframe") || $(el).is('link[rel="canonical"], link[rel="alternate"]')) continue;

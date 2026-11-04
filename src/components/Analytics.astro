@@ -1,0 +1,24 @@
+---
+// Google Analytics 4 through the Google tag the WordPress site used
+// (Site Kit, GT-MJBJZ45), so GA history continues in the same property.
+// The only JavaScript on public pages besides JSON-LD. It runs on the
+// production hosts only (not beta, pages.dev or local builds), and fetches
+// gtag.js after the page has loaded so it cannot delay rendering.
+---
+
+<script is:inline>
+  if (/^(www\.)?livingrhea\.com$/.test(location.hostname)) {
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () {
+      dataLayer.push(arguments);
+    };
+    gtag("js", new Date());
+    gtag("config", "GT-MJBJZ45");
+    addEventListener("load", function () {
+      var s = document.createElement("script");
+      s.async = true;
+      s.src = "https://www.googletagmanager.com/gtag/js?id=GT-MJBJZ45";
+      document.head.appendChild(s);
+    });
+  }
+</script>
