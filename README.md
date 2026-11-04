@@ -29,7 +29,7 @@ npm run dev
 
 **Site owner:** start with [OWNER-MANUAL.md](OWNER-MANUAL.md).
 
-The owner edits blog posts and the main pages' text at `/admin/` ([Sveltia CMS](https://sveltiacms.app), signed in with GitHub). Each edit becomes a draft pull request. See [the editing guide](docs/cms-editing-guide.md) and [the CMS architecture](docs/cms-architecture.md). Layout changes are made in the source.
+The owner edits blog posts, and the main pages' titles and search descriptions, at `/admin/` ([Sveltia CMS](https://sveltiacms.app), signed in with GitHub). Each edit becomes a draft pull request. See [the editing guide](docs/cms-editing-guide.md) and [the CMS architecture](docs/cms-architecture.md). Layout changes are made in the source.
 
 ## Launch and follow-up
 
