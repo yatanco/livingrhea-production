@@ -151,7 +151,12 @@ test("original category and frequent tag archives are served, linked and listed"
     selfcare: "self-care",
     detoxification: "detox",
     "green-smoothie-2": "green-smoothies",
+    // Global Smoothie Day posts share one "smoothie" tag (owner request).
+    "global-smoothie-day": "smoothie",
+    "smoothie-2": "smoothie",
   };
+  // Posts that had no WordPress tag but were tagged since.
+  const addedTags = { smoothie: ["gsd-community-party-croatia", "gsd-community-party-kenya"] };
   const tagPosts = new Map();
   for (const post of await json("migration/wordpress-posts.json"))
     if (post.slug !== "choice")
@@ -162,6 +167,8 @@ test("original category and frequent tag archives are served, linked and listed"
           .map((term) => mergedTags[term.slug] || term.slug),
       ))
         tagPosts.set(slug, (tagPosts.get(slug) || 0) + 1);
+  for (const [slug, posts] of Object.entries(addedTags))
+    tagPosts.set(slug, (tagPosts.get(slug) || 0) + posts.length);
   for (const [from, to] of Object.entries(mergedTags)) {
     assert.ok(redirects.includes(`/tag/${from}/ /tag/${to}/ 301`), from);
     assert.equal(tagPosts.has(from), false);

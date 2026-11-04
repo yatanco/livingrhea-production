@@ -8,6 +8,9 @@ author: Dr Rhea
 categories:
   - name: Blog
     slug: blog
+tags:
+  - name: "smoothie"
+    slug: smoothie
 featuredImage: images/gsd-community-party-kenya.webp
 featuredImageAlt: GSD COMMUNITY PARTY KENYA!
 legacyId: 6592

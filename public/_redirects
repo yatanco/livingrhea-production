@@ -123,6 +123,9 @@
 /tag/selfcare/ /tag/self-care/ 301
 /tag/detoxification/ /tag/detox/ 301
 /tag/green-smoothie-2/ /tag/green-smoothies/ 301
+# Global Smoothie Day posts share one "smoothie" tag.
+/tag/global-smoothie-day/ /tag/smoothie/ 301
+/tag/smoothie-2/ /tag/smoothie/ 301
 # WordPress tags used on fewer than 3 posts have no archive (MIN_TAG_POSTS).
 # Exact rules, not /tag/*: Cloudflare applies redirects even when a page exists.
 /tag/amazing/ /blog/ 301
@@ -257,7 +260,6 @@
 /tag/service/ /blog/ 301
 /tag/shopping-list/ /blog/ 301
 /tag/simple-green-smoothies/ /blog/ 301
-/tag/smoothie-2/ /blog/ 301
 /tag/smoothie-movement/ /blog/ 301
 /tag/soup-recipe/ /blog/ 301
 /tag/spiralizer/ /blog/ 301

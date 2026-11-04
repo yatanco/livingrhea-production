@@ -30,8 +30,8 @@ tags:
     slug: cleanse
   - name: "detox"
     slug: detox
-  - name: "Global Smoothie Day"
-    slug: global-smoothie-day
+  - name: "smoothie"
+    slug: smoothie
   - name: "green smoothies"
     slug: green-smoothies
   - name: "Health Coach"

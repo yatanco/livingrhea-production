@@ -28,14 +28,12 @@ categories:
   - name: Scientific Wellness
     slug: scientific-wellness
 tags:
-  - name: "Global Smoothie Day"
-    slug: global-smoothie-day
+  - name: "smoothie"
+    slug: smoothie
   - name: "green smoothies"
     slug: green-smoothies
   - name: "simple green smoothies"
     slug: simple-green-smoothies
-  - name: "smoothie"
-    slug: smoothie-2
   - name: "Smoothie Movement"
     slug: smoothie-movement
   - name: "smoothies"

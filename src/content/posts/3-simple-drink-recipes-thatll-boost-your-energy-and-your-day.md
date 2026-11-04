@@ -36,16 +36,14 @@ tags:
     slug: coffee-substitute
   - name: "energy boost"
     slug: energy-boost
-  - name: "Global Smoothie Day"
-    slug: global-smoothie-day
+  - name: "smoothie"
+    slug: smoothie
   - name: "green smoothies"
     slug: green-smoothies
   - name: "health hack"
     slug: health-hack
   - name: "lemon water"
     slug: lemon-water
-  - name: "smoothie"
-    slug: smoothie-2
 featuredImage: images/3-simple-drink-recipes-thatll-boost-your-energy-and-your-day.webp
 featuredImageAlt: ""
 legacyId: 1975
