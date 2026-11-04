@@ -47,7 +47,7 @@ legacyUrl: https://livingrhea.com/are-you-drinking-a-smoothie-or-a-slurpee/
 legacyFeaturedImage: /wp-content/uploads/2016/09/GlobalSmoothieDay_2-1.webp
 ---
 
-##### You might be surprised about what gets passed off as a smoothie these days.
+**You might be surprised about what gets passed off as a smoothie these days.**
 
 Smoothies are all the rage. They’ve quickly become a full-blown, worldwide health trend.
 
@@ -65,7 +65,7 @@ Aren’t the messages from smoothie merchants such as Jamba and Booster Juice ju
 
 In reality, the health claims floating around mainstream smoothies are not only misleading, but they can also be dangerous. Often consisting of 70% sugar, and made with low-quality, high sugar fruits and fruit juices, these smoothies can contain upwards of 60 grams of sugar.
 
-### Green Smoothies: Not Your Run-of-the-Sugar-Mill Smoothie
+## Green Smoothies: Not Your Run-of-the-Sugar-Mill Smoothie
 
 Fortunately, not all smoothies are unhealthy or dangerous — in fact, green smoothies, when made with the correct vegetable to fruit ratio, along with healthy fats and plant proteins, not only provide greater nutrition than many common sit-down meals, but also serve as an easy, real-food alternative to many dubious prescription medicines.
 
@@ -79,7 +79,7 @@ It’s also the time to celebrate the goodness that green smoothies and self-car
 
 Global Smoothie Day serves as a platform to educate, motivate, and connect self-care seekers around the globe. Join me in this exciting movement that celebrates health empowerment and advocacy.
 
-### Meet The 60–20–20 Real Green Smoothie
+## Meet The 60–20–20 Real Green Smoothie
 
 Typically consisting of 60% vegetables and superfoods, 20% healthy fats and plant proteins and 20% low glycemic (GI) fruits, green smoothies aren’t your average, everyday smoothie. As a point of reference, low glycemic index fruits, or those with a GI of below 55 have less of an impact on your blood sugar; essentially, they keep your blood sugar from spiking and crashing — the common cause of low energy, weight gain and food cravings.
 
@@ -121,25 +121,25 @@ Here’s a list of vegetables, healthy fats and low GI fruits commonly used in g
 -   Sunflower seeds
 -   Coconut oil
 
-### The Amazing Health Benefits of Green Smoothies
+## The Amazing Health Benefits of Green Smoothies
 
 1 or 2 servings of green smoothies per day has you well on your way to meeting your recommended daily intake of essential nutrients, including vitamins A, C, E, K, B5, B6, B9, magnesium, potassium, calcium, phosphorus and zinc.
 
 In addition, the fiber, phytochemicals, plant based protein and healthy fats in green smoothies turn them into a complete meal, leaving you with sustained energy, a satiated palate, and diabetes and obesity in your rear-view mirror.
 
-### Green Smoothies Are Loaded With Fiber
+## Green Smoothies Are Loaded With Fiber
 
 Green vegetables are loaded with fiber; this fiber, when consumed in its raw form stays in the digestive system and breaks down slowly; this not only keeps you feeling full over a longer period of time, it also ensures maximum nutrient absorption.
 
 Fiber binds (actually sticks!) to several toxins and known carcinogens found in foods; fiber also moves waste and these toxins quickly through the intestinal tract and out of your system, preventing these harmful chemicals from being absorbed by the body.
 
-### Green Smoothies Prevent the Dreaded Blood Sugar Spike
+## Green Smoothies Prevent the Dreaded Blood Sugar Spike
 
 We know that low GI fruits and vegetables are essential when balancing blood sugar levels. Research also demonstrates that fiber is equally as important in lowering blood sugar and eliminating the unwanted associated side effects, including low-energy, hunger, and cravings.
 
 People associate fruit and fruit juice with good health, but consuming too much fructose (the sugar found in fruits) can actually impede the liver’s ability to convert it into usable energy. Instead the fructose is converted and stored as fat. Fructose has also been associated with stimulating hunger after a meal and has even been shown to cause physical and neurochemical dependency — that’s right, the natural sugars found in fruits are addictive!
 
-### Make Everyday Global Smoothie Day
+## Make Everyday Global Smoothie Day
 
 You’ve heard all about the amazing health benefits of the “real” green smoothie, so what are you waiting for? GO DRINK A GREEN SMOOTHIE! You *do* have time, you *can* afford it, you *know* how to make one (if not, [click here](/#freeGuide)!), or go custom order one — your fav smoothie bar will be happy to whip up a customized 60–20–20 green smoothie just for you!
 
@@ -149,7 +149,7 @@ Plus, we’re sharing 50 Doctor-approved Clean Smoothie Recipes at our favorite 
 
 [CLICK HERE FOR YOUR GLOBAL SMOOTHIE DAY STARTER KIT](/#freeGuide)
 
-### Why I founded Global Smoothie Day
+## Why I founded Global Smoothie Day
 
 Inspired by the focus of my PhD which examined the toxic effects of the Western Diet, as well as the “real food medicine” that helped me reverse chronic illnesses and the symptoms of my clients, I felt it was time to launch a platform to share health education and evidence-based truths to motivate the masses to enter this overwhelming world of health in a safe and sustainable manner. Using creativity and optimism as my guiding principles, I brought this vision to life through Global Smoothie Day.
 

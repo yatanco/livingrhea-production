@@ -91,4 +91,4 @@ From dark to light
 From blind to sight  
 I choose vitality
 
-#### *As always, feel free to reach out in the comments below if this resonated with you. I’d love to hear from you.*
+*As always, feel free to reach out in the comments below if this resonated with you. I’d love to hear from you.*

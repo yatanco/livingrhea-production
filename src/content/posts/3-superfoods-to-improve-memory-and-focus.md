@@ -41,7 +41,7 @@ legacyUrl: https://livingrhea.com/3-superfoods-to-improve-memory-and-focus/
 legacyFeaturedImage: /wp-content/uploads/2016/10/ghee-1-1.webp
 ---
 
-##### Today marks the end of my sequence of video clips from Envision Festival, and I’m sharing some simple strategies to improve the functioning of our brain.
+**Today marks the end of my sequence of video clips from Envision Festival, and I’m sharing some simple strategies to improve the functioning of our brain.**
 
 **It’s a common topic these days, as brain browsers continue to open and run in the background while we try to stay present and focused.**
 
@@ -64,4 +64,4 @@ Ready to improve memory and gain more focus? Watch the video below:
 
 I’d love to hear from you:
 
-### What superfoods or practices are you using to boost your brain power? What organizational tools are you using to keep yourself health-accountable? Let me know in the comments below.
+**What superfoods or practices are you using to boost your brain power? What organizational tools are you using to keep yourself health-accountable? Let me know in the comments below.**

@@ -120,3 +120,14 @@ test("every page has its own title", () => {
     seen.set(title, page);
   }
 });
+
+test("headings never skip a level (h2 after h1, h3 after h2, ...)", () => {
+  for (const [page, $] of html) {
+    let prev = 1;
+    for (const h of $("main h1, main h2, main h3, main h4, main h5, main h6").toArray()) {
+      const level = Number(h.tagName[1]);
+      assert.ok(level <= prev + 1, `${page}: h${prev} -> h${level} "${$(h).text().slice(0, 50)}"`);
+      prev = level;
+    }
+  }
+});

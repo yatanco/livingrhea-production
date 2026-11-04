@@ -31,7 +31,7 @@ legacyUrl: https://livingrhea.com/hack-your-productivity-high-fat-diet/
 legacyFeaturedImage: /wp-content/uploads/2016/10/productivity2-e1485213928621.webp
 ---
 
-##### So many of us struggle with post-meal crashes during the day. We eat a meal thinking it will give us a boost or at the least satisfy our palate, and then 30 or so minutes after eating we’re overwhelmed with extreme fatigue.
+**So many of us struggle with post-meal crashes during the day. We eat a meal thinking it will give us a boost or at the least satisfy our palate, and then 30 or so minutes after eating we’re overwhelmed with extreme fatigue.**
 
 Some of us fight the fatigue with an espresso shot, but as we know, it’s a bandaid effect and eventually, we’re going to have to identify the root cause.
 
@@ -41,7 +41,7 @@ There are a couple of ways to hack your productivity and meals so that energy le
 
 In the video I tell you about ketosis, or in other words, switching your body’s fuel burning system from carbs to fat by consuming high quantities of fat and low quantities of carbs consistently for a few days.
 
-### While this form of eating benefits your brain and waistline, it’s definitely not for everyone.
+**While this form of eating benefits your brain and waistline, it’s definitely not for everyone.**
 
 So an alternative approach is to consume more (healthy) fats and fewer carbs for the first ⅔ of the day — your ultimate productivity time, and then switching to a more balanced meal at dinner – with more protein and slow digesting (or fibrous) carbs.
 
@@ -64,4 +64,4 @@ Here are some highlights from this week’s video:
 
 **At the 2:23 mark** I share an alternative “productivity hacking” meal structure that might not require as much willpower as the full blown ketogenic diet
 
-### I’d love to hear from you: Have you tried a ketogenic diet or simply started to consume more healthy fats and fewer carbs? How did it make you feel? Let me know in the comments below.
+**I’d love to hear from you: Have you tried a ketogenic diet or simply started to consume more healthy fats and fewer carbs? How did it make you feel? Let me know in the comments below.**

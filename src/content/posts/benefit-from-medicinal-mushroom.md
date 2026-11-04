@@ -40,7 +40,7 @@ The latter are referred to as medicinal mushrooms. These fungi deliver more heal
 
 These bioactive ingredients have incredibly therapeutic, and even magical healing properties, which historically led to their use as medicines in several ancient cultures around the world for the past several millennia.
 
-#### **Today, through the scientific method, we are now learning that medicinal mushrooms may be one of the most multi-modal healing medicines on the planet, with the potential to treat, heal, and prevent some of the most complex chronic conditions of our time.**
+**Today, through the scientific method, we are now learning that medicinal mushrooms may be one of the most multi-modal healing medicines on the planet, with the potential to treat, heal, and prevent some of the most complex chronic conditions of our time.**
 
 ## **A Brief History of  Medicinal  Mushrooms**
 

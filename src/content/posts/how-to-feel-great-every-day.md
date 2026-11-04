@@ -45,7 +45,7 @@ legacyUrl: https://livingrhea.com/how-to-feel-great-every-day/
 legacyFeaturedImage: /wp-content/uploads/2016/10/feelbest.webp
 ---
 
-##### When was the last time you felt amazing?
+**When was the last time you felt amazing?**
 
 This is the question I asked the audience at Envision Festival and the question I’m asking you today.
 
@@ -53,7 +53,7 @@ I challenge you to the idea that you can feel your best every single day.
 
 Go back into your past for a moment and relive that naturally high moment in all of your senses. What were you wearing? What was the smell like? How did you feel? What were you thinking? Who was with you? Where were you? Close your eyes and bring yourself back there. Breathe into it.
 
-### I want to challenge you to make this your baseline. Whenever you feel low, I want you to go back and picture this moment. You might want to set up reminders to do this.
+**I want to challenge you to make this your baseline. Whenever you feel low, I want you to go back and picture this moment. You might want to set up reminders to do this.**
 
 So often when we feel low, we go back into our past and relive other low periods. Or our friends share equally low moments in an attempt to comfort us.
 
@@ -74,6 +74,6 @@ Here are some highlights from this week’s video:
 **At the 1:00 mark** I share my definition of optimal living (hint: it involves generosity and love!)  
 **At the 3:06 mark** I share an easy strategy to build your health support team
 
-##### I’d love to hear from you: What’s your “optimal health” vision? When did you last feel your best? Let me know in the comments below.
+**I’d love to hear from you: What’s your “optimal health” vision? When did you last feel your best? Let me know in the comments below.**
 
 PS if you’re ready for some group accountability and self-care support from our loving community, shoot me an email at dr.rhea@livingrhea.com and I’ll let you in on our self-care mastery group coaching program starting in January.
