@@ -10,6 +10,6 @@ This repo (`yatanco/livingrhea-beta`, branch `main`) is a ground-up rebuild of l
 - External links must already exist in `tests/fixtures/external-links.json` (copied from the live build). Never type an external URL from memory; copy it from the source.
 - Keep slugs stable with exact redirects in `public/_redirects` (wildcards last).
 - Contact posts to the configured Formspree endpoint; newsletter forms post to the existing Mailchimp audience. Do not send test messages or subscribe addresses without explicit authorization.
-- Preserve the crawler privacy policy in `robots.txt`. Canonicals point to livingrhea.com so beta is not indexed as a duplicate.
+- `robots.txt` allows all crawlers, AI included, for maximum reach (owner decision, November 2026); keep it that way. Canonicals point to livingrhea.com so beta is not indexed as a duplicate.
 - Change source, not `dist/`. Historical exports under `migration/` are reference data.
 - Run `npm run check`; verify desktop and mobile for visual changes.

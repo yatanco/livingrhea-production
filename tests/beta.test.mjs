@@ -94,3 +94,10 @@ test("newsletter forms keep the Mailchimp audience and honeypot", () => {
   }
   assert.equal($("#freeGuide").length, 1);
 });
+
+test("robots.txt welcomes every crawler and lists the sitemap", async () => {
+  const robots = await readFile("dist/robots.txt", "utf8");
+  assert.match(robots, /^User-agent: \*\nAllow: \/$/m);
+  assert.doesNotMatch(robots, /^Disallow:/m);
+  assert.match(robots, /^Sitemap: https:\/\/livingrhea\.com\/sitemap\.xml$/m);
+});

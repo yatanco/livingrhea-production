@@ -5,7 +5,7 @@ Checked October 27, 2026. This is a recovery plan, not a diagnosis of the traffi
 ## Findings from the public site and migration
 
 - The current WordPress homepage declares `index, follow`. A homepage `noindex` directive was not found in the checked response. Older migration notes saying it is sitewide noindex are outdated.
-- The current robots file permits ordinary crawling, advertises the WordPress sitemap, and blocks several individually named bots. That is not evidence that every AI-search experience is blocked. The existing crawler policy is preserved in the Astro migration.
+- The current robots file permits ordinary crawling, advertises the WordPress sitemap, and blocks several individually named bots. That is not evidence that every AI-search experience is blocked. The rebuilt site replaces it with a robots.txt that allows all crawlers, AI search and assistants included, and lists the sitemap (owner decision, November 2026: maximum reach).
 - The original Astro copy fetched WordPress content and layout at build time. The final migration uses local content and layout files, so retiring WordPress will not break rebuilds.
 - Known original post URLs and historical internal links have been mapped to Astro routes. Old sitemap endpoints redirect to `/sitemap.xml`, preserving a discovery route for previously submitted sitemaps.
 - Blog posts previously inherited parts of the About-page head through the shared layout. Canonical/social metadata now describes each route, and factual Person, WebSite, WebPage/BlogPosting structured data is generated from local records. No new visible design or medical claims are introduced.
