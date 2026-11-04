@@ -110,3 +110,13 @@ test("robots.txt welcomes every crawler and lists the sitemap", async () => {
   assert.doesNotMatch(robots, /^Disallow:/m);
   assert.match(robots, /^Sitemap: https:\/\/livingrhea\.com\/sitemap\.xml$/m);
 });
+
+test("every page has its own title", () => {
+  const seen = new Map();
+  for (const [page, $] of html) {
+    if (page === "dist/404.html") continue;
+    const title = $("title").text();
+    assert.ok(!seen.has(title), `${page} repeats ${seen.get(title)}: ${title}`);
+    seen.set(title, page);
+  }
+});
