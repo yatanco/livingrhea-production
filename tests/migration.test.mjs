@@ -160,6 +160,7 @@ test("original category and frequent tag archives are served, linked and listed"
     // Global Smoothie Day posts share one "smoothie" tag (owner request).
     "global-smoothie-day": "smoothie",
     "smoothie-2": "smoothie",
+    "recipe-3": "recipe",
   };
   // Posts that had no WordPress tag but were tagged since.
   const addedTags = {
@@ -171,7 +172,7 @@ test("original category and frequent tag archives are served, linked and listed"
       "green-smoothie-guide-nutshell",
       "the-changemaker-formula-smoothie-challenge",
     ],
-    "recipe-3": ["green-warrior-smoothie", "green-smoothie-guide-nutshell", "the-changemaker-formula-smoothie-challenge"],
+    recipe: ["green-warrior-smoothie", "green-smoothie-guide-nutshell", "the-changemaker-formula-smoothie-challenge"],
   };
   const tagPosts = new Map();
   for (const post of await json("migration/wordpress-posts.json"))

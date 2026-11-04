@@ -36,7 +36,7 @@ tags:
   - name: "rawvegan"
     slug: rawvegan
   - name: "recipe"
-    slug: recipe-3
+    slug: recipe
 featuredImage: images/heart-love-5-minute-chai-au-chocolat.webp
 featuredImageAlt: ""
 recipe:

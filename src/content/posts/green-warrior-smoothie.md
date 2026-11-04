@@ -34,7 +34,7 @@ tags:
   - name: "healthy recipes"
     slug: healthy-recipes
   - name: "recipe"
-    slug: recipe-3
+    slug: recipe
   - name: "smoothie"
     slug: smoothie
   - name: "smoothies"

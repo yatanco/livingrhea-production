@@ -128,6 +128,8 @@
 # Global Smoothie Day posts share one "smoothie" tag.
 /tag/global-smoothie-day/ /tag/smoothie/ 301
 /tag/smoothie-2/ /tag/smoothie/ 301
+# The "recipe" tag drops WordPress's -3 suffix.
+/tag/recipe-3/ /tag/recipe/ 301
 # WordPress tags used on fewer than 3 posts have no archive (MIN_TAG_POSTS).
 # Exact rules, not /tag/*: Cloudflare applies redirects even when a page exists.
 /tag/amazing/ /blog/ 301

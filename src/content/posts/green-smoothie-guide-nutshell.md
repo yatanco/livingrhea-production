@@ -35,7 +35,7 @@ tags:
   - name: "rawfood"
     slug: rawfood
   - name: "recipe"
-    slug: recipe-3
+    slug: recipe
   - name: "Self-Care"
     slug: self-care
   - name: "smoothie"

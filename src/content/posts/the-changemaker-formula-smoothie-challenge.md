@@ -26,7 +26,7 @@ categories:
     slug: scientific-wellness
 tags:
   - name: "recipe"
-    slug: recipe-3
+    slug: recipe
   - name: "smoothie"
     slug: smoothie
 featuredImage: images/the-changemaker-formula-smoothie-challenge.webp
