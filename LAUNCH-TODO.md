@@ -14,6 +14,11 @@ Pages project: `livingrhea-beta` (https://livingrhea-beta.pages.dev/, custom dom
 
 `livingrhea.com` is currently attached to the old `livingrhea-astro` Pages project. A custom domain can belong to only one project, so it must be removed there before adding it here (step 7).
 
+## Open tasks (owner or developer)
+
+1. **CMS sign-in.** `public/admin/config.yml` sets `base_url: https://sveltia-cms-auth.haneen.workers.dev`, which is not on our Cloudflare account. Deploy our own `sveltia-cms-auth` worker (see `docs/cms-architecture.md`), set `ALLOWED_DOMAINS` to include `livingrhea.com` and `beta.livingrhea.com`, point the GitHub OAuth App callback at it, and update `base_url`.
+2. **Booking and Fullscript links.** "Book a free consultation", "Book a session" and "Order your Fullscript supplements" (Coaching and Himalayan Breathwork pages) all link to `/contact/`. Rhea needs to provide the real booking and Fullscript URLs. Then add them to `tests/fixtures/external-links.json` and the page content.
+
 ## Owner checks before switching the domain
 
 1. Review Home, About, Coaching, Breathwork, Music, Press, Smoothie Movement, Blog and Contact on desktop and phone.
@@ -38,4 +43,4 @@ Pages project: `livingrhea-beta` (https://livingrhea-beta.pages.dev/, custom dom
 
 ## CMS
 
-Sveltia CMS at `/admin/`, publishing to this repo (`main`) through GitHub as draft PRs. See `docs/cms-editing-guide.md` (owner) and `docs/cms-architecture.md` (setup). It covers blog posts fully and the main pages' title, description and body text. Changing page layout is still a developer task.
+Sveltia CMS at `/admin/`, publishing to this repo (`main`) through GitHub as draft PRs. See `docs/cms-editing-guide.md` (owner) and `docs/cms-architecture.md` (setup). It covers blog posts fully and the main pages' title, description and body text. Changing page layout is still a developer task. Sign-in depends on open task 1.
