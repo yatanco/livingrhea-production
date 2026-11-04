@@ -23,7 +23,7 @@ Pages project: `livingrhea-beta` (https://livingrhea-beta.pages.dev/, custom dom
 
 1. Review Home, About, Coaching, Breathwork, Music, Press, Smoothie Movement, Blog and Contact on desktop and phone.
 2. Submit a real contact message to `https://formspree.io/f/mzeerlkq` and confirm it reaches the intended inbox. In the Formspree dashboard, check that the notification address is correct. The agent has not sent a test message.
-3. Test the newsletter signup and smoothie guide delivery with an address you control. The existing Mailchimp audience (`224b479806`) is kept. Its automation cannot be verified from the page HTML.
+3. Test the newsletter signup and smoothie guide delivery with an address you control. The existing Mailchimp audience (`224b479806`) is kept. Its automation cannot be verified from the page HTML. On WordPress, check MC4WP → Forms → form 8905 → Settings for any tags or groups it applied. If there are any, add them to `src/components/NewsletterForm.astro` as hidden Mailchimp fields (tags need their numeric IDs from Mailchimp) so the guide automation still fires.
 4. Confirm that the latest `main` deploy succeeded, that historical redirects work, and that `/sitemap.xml` and `/blog/rss.xml` return XML.
 
 ## Launch steps
