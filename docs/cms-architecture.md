@@ -76,7 +76,7 @@ else is already built:
    npx wrangler deploy
    npx wrangler secret put GITHUB_CLIENT_ID      # paste the Client ID
    npx wrangler secret put GITHUB_CLIENT_SECRET  # paste the Client Secret
-   npx wrangler secret put ALLOWED_DOMAINS        # value: livingrhea.com,livingrhea-astro.pages.dev
+   npx wrangler secret put ALLOWED_DOMAINS        # value: livingrhea.com,beta.livingrhea.com
    ```
 
    The deployed URL will be `https://sveltia-cms-auth.<your-workers.dev-subdomain>.workers.dev`

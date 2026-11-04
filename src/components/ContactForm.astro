@@ -2,7 +2,7 @@
 import settings from "../content/settings/site.json";
 // Posts straight to Formspree; browser validation only, no script.
 // _gotcha is Formspree's honeypot: bots that fill it are silently dropped.
-// Formspree's form settings redirect successful sends to /contact/thanks/.
+// After sending, visitors see Formspree's own thank-you page.
 ---
 
 <form class="contact-form" action={settings.contactFormAction} method="post">

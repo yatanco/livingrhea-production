@@ -16,13 +16,13 @@ Pages project: `livingrhea-beta` (https://livingrhea-beta.pages.dev/, custom dom
 
 ## Open tasks (owner or developer)
 
-1. **CMS sign-in.** `public/admin/config.yml` sets `base_url: https://sveltia-cms-auth.haneen.workers.dev`, which is not on our Cloudflare account. Deploy our own `sveltia-cms-auth` worker (see `docs/cms-architecture.md`), set `ALLOWED_DOMAINS` to include `livingrhea.com` and `beta.livingrhea.com`, point the GitHub OAuth App callback at it, and update `base_url`.
+1. **CMS sign-in.** `public/admin/config.yml` uses our own `sveltia-cms-auth` worker (`sveltia-cms-auth.haneen.workers.dev`, on our Cloudflare account; `GITHUB_CLIENT_ID`, `GITHUB_CLIENT_SECRET` and `ALLOWED_DOMAINS` are set). Make sure `ALLOWED_DOMAINS` includes `livingrhea.com` (and `beta.livingrhea.com` to edit before launch): `npx wrangler secret put ALLOWED_DOMAINS --name sveltia-cms-auth`. Then sign in at `/admin/` once to confirm.
 2. **Booking and Fullscript links.** "Book a free consultation", "Book a session" and "Order your Fullscript supplements" (Coaching and Himalayan Breathwork pages) all link to `/contact/`. Rhea needs to provide the real booking and Fullscript URLs. Then add them to `tests/fixtures/external-links.json` and the page content.
 
 ## Owner checks before switching the domain
 
 1. Review Home, About, Coaching, Breathwork, Music, Press, Smoothie Movement, Blog and Contact on desktop and phone.
-2. Submit a real contact message to `https://formspree.io/f/mzeerlkq` and confirm it reaches the intended inbox. In the Formspree dashboard, check that the notification address is correct. The agent has not sent a test message.
+2. Submit a real contact message to `https://formspree.io/f/mzeerlkq` and confirm it reaches the intended inbox. In the Formspree dashboard, check that the notification address is correct. After sending, visitors see Formspree's own thank-you page. The agent has not sent a test message.
 3. Test the newsletter signup and smoothie guide delivery with an address you control. The existing Mailchimp audience (`224b479806`) is kept. Its automation cannot be verified from the page HTML. On WordPress, check MC4WP → Forms → form 8905 → Settings for any tags or groups it applied. If there are any, add them to `src/components/NewsletterForm.astro` as hidden Mailchimp fields (tags need their numeric IDs from Mailchimp) so the guide automation still fires.
 4. Confirm that the latest `main` deploy succeeded, that historical redirects work, and that `/sitemap.xml` and `/blog/rss.xml` return XML.
 
