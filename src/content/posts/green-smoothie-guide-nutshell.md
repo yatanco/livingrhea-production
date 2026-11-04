@@ -34,8 +34,12 @@ tags:
     slug: greensmoothies
   - name: "rawfood"
     slug: rawfood
+  - name: "recipe"
+    slug: recipe-3
   - name: "Self-Care"
     slug: self-care
+  - name: "smoothie"
+    slug: smoothie
 featuredImage: images/green-smoothie-guide-nutshell.webp
 featuredImageAlt: ""
 legacyId: 1215

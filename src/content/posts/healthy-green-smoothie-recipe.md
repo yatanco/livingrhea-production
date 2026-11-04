@@ -51,6 +51,8 @@ tags:
     slug: recipe-3
   - name: "Self-Care"
     slug: self-care
+  - name: "smoothie"
+    slug: smoothie
   - name: "Wellness"
     slug: wellness
 featuredImage: images/healthy-green-smoothie-recipe.webp

@@ -24,6 +24,11 @@ author: Dr Rhea
 categories:
   - name: Scientific Wellness
     slug: scientific-wellness
+tags:
+  - name: "recipe"
+    slug: recipe-3
+  - name: "smoothie"
+    slug: smoothie
 featuredImage: images/the-changemaker-formula-smoothie-challenge.webp
 featuredImageAlt: ""
 legacyId: 8780

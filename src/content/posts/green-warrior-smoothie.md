@@ -33,6 +33,10 @@ tags:
     slug: green-smoothies
   - name: "healthy recipes"
     slug: healthy-recipes
+  - name: "recipe"
+    slug: recipe-3
+  - name: "smoothie"
+    slug: smoothie
   - name: "smoothies"
     slug: smoothies-2
 featuredImage: images/green-warrior-smoothie.webp

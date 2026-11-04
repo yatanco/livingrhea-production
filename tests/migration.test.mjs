@@ -162,7 +162,17 @@ test("original category and frequent tag archives are served, linked and listed"
     "smoothie-2": "smoothie",
   };
   // Posts that had no WordPress tag but were tagged since.
-  const addedTags = { smoothie: ["gsd-community-party-croatia", "gsd-community-party-kenya"] };
+  const addedTags = {
+    smoothie: [
+      "gsd-community-party-croatia",
+      "gsd-community-party-kenya",
+      "green-warrior-smoothie",
+      "healthy-green-smoothie-recipe",
+      "green-smoothie-guide-nutshell",
+      "the-changemaker-formula-smoothie-challenge",
+    ],
+    "recipe-3": ["green-warrior-smoothie", "green-smoothie-guide-nutshell", "the-changemaker-formula-smoothie-challenge"],
+  };
   const tagPosts = new Map();
   for (const post of await json("migration/wordpress-posts.json"))
     if (post.slug !== "choice")
