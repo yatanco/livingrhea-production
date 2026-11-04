@@ -54,7 +54,7 @@ People want to use what I’m using because they know how intentional I am when 
 
 Well, I’ve got some exciting news to share with you.
 
-I put together [my wellness shopping list](http://amzn.to/1XWywMd) (food, drink, beauty, self-care accessories) for you on Amazon.
+I put together my wellness shopping list (food, drink, beauty, self-care accessories) for you on Amazon.
 
 It’s pretty extensive and it brings me much joy to know how many of my fave products are now available on Amazon.. like top quality essential oils, beauty products and supplements.
 
@@ -62,7 +62,7 @@ I’m still adding new ingredients to my list… but I wanted to get it out for 
 
 Self-care based gifts are the best! They’re such a gentle way to share a little bit about your healthy routine with family and friends.
 
-If you’d like to lovingly plant seeds for change, my favourite categories in [my shop](http://amzn.to/1XWywMd) are:
+If you’d like to lovingly plant seeds for change, my favourite categories in my shop are:
 
 -   Boudoir and Sacred Space (essential oils, acuball, non-toxic makeup and candles, etc)
 -   Powder Room (the cleanest in body and mouth care, body brush, bamboo toothbrushes, my favourite non-toxic deodorant)
@@ -74,4 +74,4 @@ As always, feel free to comment below and let me know how you’re feeling. If y
 Much love and gratitude,  
 Dr. Rhea
 
-PS Here it is again and feel free to share with your peeps: [Dr. Rhea’s Self-Care Is Sexy Shop](http://amzn.to/1XWywMd) ;).
+PS Here it is again and feel free to share with your peeps: Dr. Rhea’s Self-Care Is Sexy Shop ;).

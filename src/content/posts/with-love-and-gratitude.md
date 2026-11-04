@@ -63,7 +63,7 @@ I can’t list you all, but I will mention some of you who’ve been involved wi
 -   [Diana Nazareth](http://www.diananazareth.com/)
 -   [Bob Gundu](http://www.10framehandles.com/)
 -   [Christine Chang Photography](https://web.archive.org/web/20141219104354/http://www.christinechangphotoblog.com/)
--   [Matt Jenkins Photography](http://www.mattjenkinsphotography.ca)
+-   Matt Jenkins Photography
 -   [Yasmin Parodi](mailto:yasparodi@gmail.com) 
 -   [Brennan Caverhill](mailto:brennan.caverhill@gmail.com)
 -   [Elli Levine](mailto:elliclevene@gmail.com)
