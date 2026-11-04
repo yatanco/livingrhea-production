@@ -163,6 +163,16 @@ test("original category and frequent tag archives are served, linked and listed"
   }
   const archived = [...tagPosts].filter(([, count]) => count >= 3);
   assert.ok(archived.length > 0);
+  // Every other WordPress tag URL gets an exact 301 to the blog. A /tag/*
+  // wildcard would also catch the live archives: Cloudflare Pages applies
+  // redirects even when a static page exists at the path.
+  assert.doesNotMatch(redirects, /^\/tag\/\*/m);
+  const archivedSlugs = new Set(archived.map(([slug]) => slug));
+  for (const post of await json("migration/wordpress-posts.json"))
+    for (const term of (post._embedded?.["wp:term"] || []).flat())
+      if (term.taxonomy === "post_tag" && !mergedTags[term.slug] && !archivedSlugs.has(term.slug))
+        assert.ok(redirects.includes(`/tag/${term.slug}/ /blog/ 301`), term.slug);
+  for (const slug of archivedSlugs) assert.ok(!redirects.includes(`/tag/${slug}/ /blog/`), slug);
   for (const [slug, count] of archived) {
     const $tag = load(await readFile(`dist/tag/${slug}/index.html`, "utf8"));
     assert.equal($tag(".post-grid > li").length, count, slug);
