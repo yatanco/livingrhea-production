@@ -62,6 +62,16 @@ test("contact form cannot submit to an unconfigured placeholder", async () => {
     assert.equal(form.attr("action"), settings.contactFormAction);
     assert.doesNotMatch(settings.contactFormAction, /YOUR_|PLACEHOLDER/);
     assert.equal(new URL(settings.contactFormAction).protocol, "https:");
+    // Formspree honeypot, hidden from people and assistive tech.
+    const gotcha = form.find('input[name="_gotcha"]');
+    assert.equal(gotcha.length, 1);
+    assert.equal(gotcha.closest('[aria-hidden="true"]').length, 1);
+    assert.equal(gotcha.attr("tabindex"), "-1");
+    const $thanks = load(await readFile("dist/contact/thanks/index.html", "utf8"));
+    assert.equal($thanks("h1").text(), "Message sent");
+    assert.equal($thanks('meta[name="robots"]').attr("content"), "noindex");
+    const sitemap = await readFile("dist/sitemap.xml", "utf8");
+    assert.doesNotMatch(sitemap, /contact\/thanks/);
   } else assert.equal(form.length, 0);
 });
 test("all original post permalinks that changed have exact redirects", async () => {

@@ -22,6 +22,8 @@ interface Props {
   article?: Article;
   /** Marks the page as offering a service (e.g. "Health coaching"). */
   service?: string;
+  /** Keep a utility page (e.g. the form thank-you page) out of search. */
+  noindex?: boolean;
 }
 const {
   title,
@@ -33,6 +35,7 @@ const {
   overlayHeader = false,
   article,
   service,
+  noindex = false,
 } = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, Astro.site);
@@ -54,6 +57,7 @@ const image = socialSource ? new URL(socialSource, Astro.site).href : undefined;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{fullTitle}</title>
     {plainDescription && <meta name="description" content={plainDescription} />}
+    {noindex && <meta name="robots" content="noindex" />}
     <link rel="canonical" href={canonical} />
     <meta name="theme-color" content="#ffffff" />
     <meta property="og:title" content={fullTitle} />

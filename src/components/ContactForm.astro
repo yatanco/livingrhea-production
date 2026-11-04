@@ -1,6 +1,8 @@
 ---
 import settings from "../content/settings/site.json";
 // Posts straight to Formspree; browser validation only, no script.
+// _gotcha is Formspree's honeypot: bots that fill it are silently dropped.
+// Formspree's form settings redirect successful sends to /contact/thanks/.
 ---
 
 <form class="contact-form" action={settings.contactFormAction} method="post">
@@ -29,6 +31,12 @@ import settings from "../content/settings/site.json";
     Your message *
     <textarea class="field" name="message" rows="7" required></textarea>
   </label>
+  <div class="trap" aria-hidden="true">
+    <label>
+      Leave this field empty
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
+    </label>
+  </div>
   <button class="btn" type="submit">Send message</button>
 </form>
 
@@ -69,6 +77,10 @@ import settings from "../content/settings/site.json";
   }
   textarea.field {
     resize: vertical;
+  }
+  .trap {
+    position: absolute;
+    left: -5000px;
   }
   @media (max-width: 520px) {
     .pair {
