@@ -1,79 +1,34 @@
-# Living Rhea — beta rebuild
+# Living Rhea
 
-**This is the beta repo** (`yatanco/livingrhea-beta`, deployed from `main` to https://beta.livingrhea.com). It rebuilds the site without the WordPress theme: zero JavaScript on public pages, inlined CSS, local fonts and images, click-to-load videos. See `AGENTS.md` for the rules. Notes below describe the production repo it was copied from and may be out of date for beta.
+The production site for https://livingrhea.com, a static Astro rebuild of the former WordPress site. It ships zero JavaScript on public pages (JSON-LD only), with inlined CSS, local fonts and images, and click-to-load videos. See `AGENTS.md` for the rules.
 
-
-This static Astro site preserves the existing Living Rhea design while moving published pages, posts, layout snapshots, styles, fonts, and images into the repository. Builds and visitors do not need WordPress. Familiar `/wp-content/` and `/wp-includes/` paths are static compatibility assets, not a PHP application.
+The repo is still named `yatanco/livingrhea-beta`. The `livingrhea-beta` Cloudflare Pages project builds `main` and serves `livingrhea.com` and `www.livingrhea.com`. It went live on 3 November 2026. **Pushing `main` deploys to production**, so commit and push only when the owner asks.
 
 ## Run and verify
 
-Use Node 24, then:
+Use Node 24 (`.nvmrc`), then:
 
 ```sh
 npm ci
 npm run dev
 ```
 
-`npm run check` builds the site, checks generated local links/assets/anchors, and runs the test suite. `npm run build` creates `dist/` without fetching WordPress. Astro is pinned to stable `7.4.2` with a committed lockfile. Use Node 24 (`.nvmrc`).
+`npm run check` builds the site, checks local links, assets and anchors in `dist/`, and runs the tests. Astro is pinned to `7.4.2` with a committed lockfile.
 
 ## Source
 
-- `src/pages/`: file-based Astro routes, including the blog archive and `[slug].astro` article route.
-- `src/content/pages/` and `src/content/posts/`: local Markdown content collections with validated frontmatter. Main page bodies retain the original exported HTML, classes, and wrappers.
-- `src/content/shells/`: historical layout snapshots. Astro components and `Base.astro` assemble the local site chrome at build time.
-- `src/styles/site/`: repository-owned local CSS, imported by the routes that use it. Article-only framing is in `article.css`.
-- `public/`: local theme compatibility assets, JavaScript, fonts, images, redirects, and site files.
-- `src/lib/`: local content, layout, image, and SEO helpers. Normal builds make no WordPress API calls.
-- `migration/`: original public exports and image/link recovery records for comparison.
-- `docs/`: owner guides, migration notes, image measurements, audit findings, and the current handoff log.
+- `src/pages/`: routes, including the blog, category and tag archives, the sitemap and RSS.
+- `src/content/pages/` and `src/content/posts/`: Markdown content (the CMS edits these). `src/content/settings/site.json` holds site settings such as the contact form endpoint.
+- `src/components/` and `src/components/pages/`: shared components and one component per main page.
+- `src/layouts/Base.astro`: the page shell, SEO tags and JSON-LD.
+- `src/styles/beta/global.css`: the design system.
+- `public/`: fonts, images (kept under their historical `/wp-content/uploads/` paths), `_redirects`, `_headers`, `robots.txt` and the CMS at `/admin/`.
+- `migration/`: original WordPress exports, kept as reference data.
 
 ## Editing
 
-The owner can edit blog posts and the eight main pages' title/description/body
-text at `/admin/` — a [Sveltia CMS](https://sveltiacms.app)
-instance, signed in with GitHub, publishing through the same
-branch-preview-review flow as a code change. See
-[the owner's editing guide](docs/cms-editing-guide.md) and
-[how it's wired up / how to reuse it elsewhere](docs/cms-architecture.md).
+The owner edits blog posts and the main pages' text at `/admin/` ([Sveltia CMS](https://sveltiacms.app), signed in with GitHub). Each edit becomes a draft pull request. See [the editing guide](docs/cms-editing-guide.md) and [the CMS architecture](docs/cms-architecture.md). Layout changes are made in the source.
 
-For anything the CMS doesn't expose yet (page layout or new fields), edit the local source while preserving existing wrappers and design. Review the Pages preview before production changes. Do not reimport WordPress over local edits.
+## Launch and follow-up
 
-## Current status
-
-The Astro site is live on https://livingrhea.com (confirmed 28 October 2026). Pushing `astro-headless-migration` deploys to production, so commit and push only when the owner asks. Screenshot review of the latest article header change is still pending. See [the current handoff](docs/HANDOFF-2026-10-28.md) for status and next steps.
-
-The contaminated “Choice – Our Global Impact” post was removed from the live content collection. `/choice/` redirects to `/blog/`; its historical WordPress export remains under `migration/`. Restore replacement copy only from a trusted source.
-
-## Audit and performance
-
-The 28 October 2026 repository audit is in [docs/repo-audit-2026-10-28.md](docs/repo-audit-2026-10-28.md), with recovered external-link probe details in [docs/external-link-audit-2026-10-28.json](docs/external-link-audit-2026-10-28.json). This is a partial audit: local generated links/assets were checked, and a recovered set of external URLs was reviewed. It is not a full recrawl or a fresh Lighthouse, Core Web Vitals, accessibility, or form-delivery assessment. Some external servers block automated probes, so 403/406/409/429 and timeout results do not by themselves prove a dead link.
-
-The measured homepage critical CSS is about 51.6 KB gzip before paint, with full route CSS retained. Existing image optimization evidence is in [docs/image-optimization-evidence.json](docs/image-optimization-evidence.json). The audit found no compelling reason to relocate the already-small WebP archive thumbnails. Large legacy styles remain a future optimization candidate; remove rules only after checking the affected routes and states.
-
-See [LAUNCH-TODO.md](LAUNCH-TODO.md) for cutover notes and [SEO-AIO-RECOVERY.md](SEO-AIO-RECOVERY.md) for traffic recovery recommendations.
-
-## Native Astro images
-
-The homepage background uses `getImage()` to generate a smaller AVIF, with the existing WebP retained as a browser fallback and social image. Large blog-card photos use Astro's `Image` component with 400/800px responsive candidates; smaller photos retain their existing file. Crop and layout are unchanged.
-
-Imported source images live under `src/assets/images/`, organized by year/month. Each blog post stores its featured image beside its `index.md` file under `src/content/posts/<slug>/images/`; Astro bundles and optimizes these post images. Inline post/page images remain in the shared source library. Public `/wp-content/` compatibility URLs stay in `public/` for the existing rendered markup and old links. Images not imported there continue to work through their existing public URL.
-
-## Documentation
-
-- [CMS editing guide (for the site owner)](docs/cms-editing-guide.md)
-- [CMS architecture and how to reuse it](docs/cms-architecture.md)
-- [Repository audit: links, images, CSS](docs/repo-audit-2026-10-28.md)
-- [Recovered external link results](docs/external-link-audit-2026-10-28.json)
-- [Claude handoff log](docs/HANDOFF-2026-10-28.md)
-- [Historical migration audit and prioritized to-do list](docs/livingrhea-audit-and-todo.md)
-- [Client owner guide](docs/client-owner-guide.md)
-- [SEO/AIO recovery plan](docs/seo-aio-recovery-plan.md)
-- [Image optimization measurements](docs/image-optimization-evidence.json)
-- [Launch checklist](LAUNCH-TODO.md)
-- [Migration status](MIGRATION-TODO.md)
-
-Older audit and launch documents describe earlier states; use the dated current audit and handoff log for recent work.
-
-See [Astro-native assets and editing](docs/astro-native-assets.md) for the current local CSS pipeline, native hero, popup removal, and retained service integrations.
-
-Current follow-up: [lean homepage CSS and social links](docs/lean-css-and-socials.md). The remaining [native content authoring target](docs/native-content-target.md) is explicitly documented; JSON/HTML exports are transitional.
+See [LAUNCH-TODO.md](LAUNCH-TODO.md) for the remaining post-launch tasks, including archiving the old `yatanco/livingrhea-astro` repo, and [SEO-AIO-RECOVERY.md](SEO-AIO-RECOVERY.md) for traffic recommendations. Older documents in `docs/` describe the previous `livingrhea-astro` site and may be out of date.

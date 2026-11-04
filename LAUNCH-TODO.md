@@ -1,5 +1,7 @@
 # Launch on Cloudflare Pages
 
+**Status, 3 November 2026:** livingrhea.com and www.livingrhea.com are live on the `livingrhea-beta` Pages project (both domains active). Launch steps 5–9 are done. Still to do: step 10 (Search Console and Bing), steps 12–13 (retire the old repo and hosting), the open tasks and the owner checks. Also, `beta.livingrhea.com` is no longer attached to any project, and www serves the same pages as the apex (canonicals point to the apex). A Cloudflare redirect rule from www to the apex is still recommended.
+
 This repo (`yatanco/livingrhea-beta`, branch `main`) is the version of livingrhea.com that will launch. Its history already contains all of `yatanco/livingrhea-astro`, which is retired once the domain moves. Do not change DNS or move the domain before the owner signs off.
 
 ## Cloudflare configuration
@@ -34,7 +36,7 @@ Pages project: `livingrhea-beta` (https://livingrhea-beta.pages.dev/, custom dom
 8. Wait for HTTPS to be active. Canonicals already use `https://livingrhea.com`. Redirect `www` to the apex with a Cloudflare redirect rule.
 9. Search indexing: the `X-Robots-Tag: noindex` rules in `public/_headers` only match `beta.livingrhea.com` and the `*.pages.dev` hosts, so livingrhea.com is indexable without any change. Keep them so the staging hosts stay out of search. `robots.txt` allows all crawlers. In the Cloudflare dashboard for the livingrhea.com zone, check that "Block AI bots", "AI Labyrinth" and the managed robots.txt setting are off, so Cloudflare doesn't block the crawlers the site allows. Optionally, redirect `beta.livingrhea.com` to `livingrhea.com` with a Cloudflare redirect rule, or remove it from the project.
 10. On the real domain, verify the home page, several old article URLs (they should 301 to `/blog/<slug>/`), a few `/tag/` URLs, `/feed/` and the contact page. Then submit `/sitemap.xml` to Google Search Console and Bing Webmaster Tools.
-11. Update `AGENTS.md` and `README.md`: this repo becomes production, so remove the "never push beta work there" and beta-only wording.
+11. ~~Update `AGENTS.md` and `README.md` to describe this repo as production.~~ Done.
 
 ## After launch: retire the old repo
 

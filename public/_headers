@@ -9,7 +9,7 @@
   Cache-Control: public, max-age=2592000
 /video/*
   Cache-Control: public, max-age=2592000
-# Staging hosts only: keep beta out of search while livingrhea.com is live.
+# Staging hosts only: livingrhea.com itself is indexed.
 https://beta.livingrhea.com/*
   X-Robots-Tag: noindex
 https://livingrhea-beta.pages.dev/*
