@@ -24,6 +24,8 @@ const dropped={
 };
 // Press items whose articles went offline are kept as text.
 const keptLinks={'smoothie-movement':/youtube\.com\/watch|gsd-gallery/,press:/crunchymamabox\.com|digitimes\.com/};
+// Downloads now served from this site instead of Dropbox.
+const hostedLinks=[[/^https:\/\/www\.dropbox\.com\/scl\/fi\/kn8i7epl5ygsm07k2zipn\//,'/downloads/global-smoothie-day-e-book-2020.pdf']];
 test('all main-page copy, destination links and forms survive the redesign',async()=>{
   const baseline=await json('migration/native-pages-baseline.json');
   for(const [slug,old]of Object.entries(baseline)){
@@ -39,7 +41,10 @@ test('all main-page copy, destination links and forms survive the redesign',asyn
     assert.deepEqual(lost.filter(w=>!(dropped[slug]||[]).includes(w)&&!style.test(w)),[],slug);
     const links=new Set($('main a[href]').map((_,e)=>$(e).attr('href')).get());
     for(const link of old.links)
-      if(!keptLinks[slug]?.test(link))assert.ok(links.has(link.replace(/&amp;/g,'&')),`${slug}: ${link}`);
+      if(!keptLinks[slug]?.test(link)){
+        const hosted=hostedLinks.find(([from])=>from.test(link))?.[1];
+        assert.ok(links.has(hosted||link.replace(/&amp;/g,'&')),`${slug}: ${link}`);
+      }
     const forms=$('main form').map((_,e)=>$(e).attr('action')).get();
     for(const action of old.forms)assert.ok(forms.includes(action.replace(/&amp;/g,'&')),`${slug}: ${action}`);
   }

@@ -10,10 +10,7 @@ const text = page.labels;
 const copy = pageSections(await Astro.slots.render("default"));
 const t = (key: string) => text[key].trim();
 const heroImage = localImage("/wp-content/uploads/2025/06/favorite-green-smoothie.webp");
-const ebook =
-  "https://www.dropbox.com/scl/fi/kn8i7epl5ygsm07k2zipn/Global-Smoothie-Day-E-Book_2020.pdf?rlkey=f3bnfsbswi3rjvscxs7u40xty&e=1&dl=0";
-const ebookAlt =
-  "https://www.dropbox.com/scl/fi/kn8i7epl5ygsm07k2zipn/Global-Smoothie-Day-E-Book_2020.pdf?rlkey=f3bnfsbswi3rjvscxs7u40xty&e=2&dl=0";
+const ebook = "/downloads/global-smoothie-day-e-book-2020.pdf";
 const shareables = ["gsd-1", "gsd-2", "gsd-3", "gsd-4", "gsd-5"];
 const gallery = ["gsd-gallery-3", "gsd-gallery-4", "gsd-gallery-5", "gsd-gallery-6-e1691422384549"];
 const parties = [
@@ -117,7 +114,7 @@ const parties = [
       <li>{t("Visiting-the-smoothie-bars-who-are--28")}</li>
       <li>{t("Sharing-our-amazing-starter-kit-and-29")}</li>
     </ul>
-    <a class="btn" href={ebookAlt}>{t("DOWNLOAD-OUR-FREE-GSD-ON-BOARDING-G-30")}</a>
+    <a class="btn" href={ebook}>{t("DOWNLOAD-OUR-FREE-GSD-ON-BOARDING-G-30")}</a>
   </div>
   <Pic path="/wp-content/uploads/2025/06/Global-Smoothie-Day-E-Book_2020-1.webp" alt="Global Smoothie Day starter kit and recipes e-book" />
 </section>
