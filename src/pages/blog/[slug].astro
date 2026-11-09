@@ -66,7 +66,9 @@ const byRhea = /rhea/i.test(post.author);
       </nav>
       <h1>{post.title}</h1>
       <p class="meta">
-        <span>By {post.author}</span>
+        <span>
+          By {byRhea ? <a href="/about/" rel="author">{post.author}</a> : post.author}
+        </span>
         <time datetime={post.pubDate.toISOString()}>{format(post.pubDate)}</time>
         {
           post.updatedDate && format(post.updatedDate) !== format(post.pubDate) && (
@@ -153,6 +155,14 @@ const byRhea = /rhea/i.test(post.author);
     gap: 6px 18px;
     color: var(--muted);
     font-size: 0.92rem;
+  }
+  .meta a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .meta a:hover {
+    color: var(--accent);
   }
   .post-image {
     width: min(100%, 1000px);
