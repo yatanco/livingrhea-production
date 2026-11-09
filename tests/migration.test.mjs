@@ -137,8 +137,14 @@ test("original category and frequent tag archives are served, linked and listed"
   const sitemap = await readFile("dist/sitemap.xml", "utf8");
   const redirects = await readFile("public/_redirects", "utf8");
   assert.ok(terms.size > 0);
-  for (const [slug, path] of terms) {
-    assert.equal(path, `/category/${slug}/`);
+  // Renamed categories keep their old URL as a redirect to the new archive.
+  const renamedCategories = { blog: "smoothie" };
+  for (const [from, to] of Object.entries(renamedCategories))
+    assert.ok(redirects.includes(`/category/${from}/ /category/${to}/ 301`), from);
+  for (const [original, oldPath] of terms) {
+    assert.equal(oldPath, `/category/${original}/`);
+    const slug = renamedCategories[original] || original;
+    const path = `/category/${slug}/`;
     const $ = load(await readFile(`dist${path}index.html`, "utf8"));
     assert.ok($(".post-grid > li").length > 0, slug);
     assert.ok(sitemap.includes(`https://livingrhea.com${path}`), slug);
@@ -197,7 +203,12 @@ test("original category and frequent tag archives are served, linked and listed"
   assert.ok(tagLinks.length > 0);
   for (const href of tagLinks) assert.ok(sitemap.includes(`https://livingrhea.com${href}`), href);
   const $blog = load(await readFile("dist/blog/index.html", "utf8"));
-  for (const path of terms.values()) assert.equal($blog(`.category-nav a[href="${path}"]`).length, 1, path);
+  for (const original of terms.keys()) {
+    const path = `/category/${renamedCategories[original] || original}/`;
+    assert.equal($blog(`.category-nav a[href="${path}"]`).length, 1, path);
+  }
+  // No category is called "Blog" inside the blog.
+  assert.equal($blog('.category-nav a[href="/category/blog/"]').length, 0);
   assert.match(sitemap, /<loc>https:\/\/livingrhea\.com\/blog\/faux-fudgey-truffles\/<\/loc><lastmod>\d{4}-\d\d-\d\d<\/lastmod>/);
   // Search snippets end on a whole word, without the recipe card's "Description" label.
   const snippetText = $('meta[name="description"]').attr("content");

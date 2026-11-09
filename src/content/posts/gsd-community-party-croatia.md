@@ -21,8 +21,8 @@ pubDate: 2025-08-15T16:58:36Z
 updatedDate: 2025-08-15T17:18:04Z
 author: Dr Rhea
 categories:
-  - name: Blog
-    slug: blog
+  - name: Smoothie
+    slug: smoothie
 tags:
   - name: "smoothie"
     slug: smoothie

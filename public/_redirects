@@ -117,6 +117,8 @@
 # WordPress archives with no published posts, and the single author archive.
 /category/press/ /press/ 301
 /category/uncategorized/ /blog/ 301
+# The "Blog" category was renamed "Smoothie".
+/category/blog/ /category/smoothie/ 301
 /author/superadzmin/ /about/ 301
 # Duplicate WordPress tags merged into one archive each.
 /tag/healthhacks/ /tag/health-hacks/ 301
