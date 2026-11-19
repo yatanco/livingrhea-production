@@ -551,6 +551,27 @@
 /tag/zucchini-pasta /blog/ 301
 /products/coconut-oil-product-review/ /blog/coconut-oil-product-review/ 301
 /products/coconut-oil-product-review /blog/coconut-oil-product-review/ 301
+/blog/choice/ /blog/ 301
+/blog/choice /blog/ 301
+/future-of-healthcare/ /blog/future-of-healthcare-with-technology/ 301
+/future-of-healthcare /blog/future-of-healthcare-with-technology/ 301
+/living-rhea/ / 301
+/living-rhea / 301
+/work-with-me/workshops-retreats/ /coaching/ 301
+/work-with-me/workshops-retreats /coaching/ 301
+/keepin-it-rhea-l/burning-man-wellness/ /blog/burning-man-wellness/ 301
+/keepin-it-rhea-l/burning-man-wellness /blog/burning-man-wellness/ 301
+/author/ /about/ 301
+/author /about/ 301
+/author/rhea/ /about/ 301
+/author/rhea /about/ 301
+/sample-page/ / 301
+/sample-page / 301
+/gamify-health/campreset.ca /blog/gamify-health/ 301
+/can-we-have-fun-with-health/campreset.ca /blog/can-we-have-fun-with-health/ 301
+/healthy-green-smoothies/globalsmoothieday.com /blog/healthy-green-smoothies/ 301
+/gamify-health/livingrhea.com/work/ /coaching/ 301
+/gamify-health/livingrhea.com/work /coaching/ 301
 # Wildcards last: Cloudflare Pages applies the first matching rule.
 /category/:cat/page/* /category/:cat/ 301
 /recipes/* /blog/:splat 301
